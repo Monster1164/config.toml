@@ -188,6 +188,12 @@ uglyURLs = false
         weight = 5
         pre = "internal"
         post = "user-circle"
+	[[menu.main]]
+        url = "/search/"
+        name = "百度"
+        weight = 6
+        pre = "internal"
+        post = "search"
 
 
 
@@ -224,7 +230,11 @@ uglyURLs = false
     # siteBrandBackgroundColor = "hsl(240, 8%, 12%)"
     # 背景图片
 	#siteBrandBackgroundImage = "linear-gradient(to right, #ef4e7b, #aa96da, #facad3)"
-    siteBrandBackgroundImage = "linear-gradient(90deg, #f79533 0, #f37055 15%, #ef4e7b 30%, #a166ab 44%, #5073b8 58%, #1098ad 72%, #07b39b 86%, #6dba82 100%)"
+    #siteBrandBackgroundImage = "linear-gradient(45deg, #f79533 0, #f37055 15%, #ef4e7b 30%, #a166ab 44%, #5073b8 58%, #1098ad 72%, #07b39b 86%, #6dba82 100%)"
+	#siteBrandBackgroundImage = "linear-gradient(45deg, #1e4f39 25%, #426738 44%, #6f7330 58%, #926422 86%, #916221 100%)"
+	
+	siteBrandBackgroundImage = " linear-gradient(to left, #22c1c3, #fdbb2d)"
+	
 	
 	# 注意：背景色和背景图片只能二选一
 
@@ -1087,4 +1097,82 @@ uglyURLs = false
     fofVideoMp4 = ""
     # 说明：视频地址可留空
 	
+
+	##########################################
+# 自行添加的多语言站点设置
+
+# 中文
+[languages.zh-cn]
+    languageName = "简体中文"
+    contentDir = "content"
+    weight = 1
+
+# 英文
+[languages.en-us]
+    languageName = "English"
+    contentDir = "content/en"
+    weight = 2
+    languageCode = "en-US"
+    hasCJKLanguage = false
+	title = "微动态"
+    #copyright = "The article is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)."
+[languages.en-us.taxonomies]
+    #category = "categories"
+    #tag = "tags"
+[languages.en-us.menu]
+    [[languages.en-us.menu.main]]
+        url = "/en-us/"
+        name = "HOME"
+        weight = 1
+        pre = "internal"
+        post = "home"
+		
+	[[languages.en-us.menu.main]]
+        url = "/en-us/moment"
+        name = "MOMENT"
+        weight = 2
+        pre = "internal"
+        post = "grav"
+   
+    [[languages.en-us.menu.main]]
+        url = "/en-us/about/"
+        name = "ABOUT"
+        weight = 3
+        pre = "internal"
+        post = "user-circle"
+        identifier = "about"
+   
+[languages.en-us.params]
+    siteDescription = "Blog of ztygcs in English."
+    listDateFormat = "January 2"
+    postWidth = 36
+    fontFamilyTitle = "'Cinzel Decorative', 'Noto Serif SC', serif"
+    fontFamilyHeadings = "'Cinzel Decorative', 'Noto Serif SC', serif"
+    fontFamilyCode = "'Source Code Pro', monospace"
+    fontFamilyBody = "'EB Garamond', 'Noto Serif SC', serif"
+    fontsLink = "https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700,700i|Noto+Serif+SC:400,700|Source+Code+Pro:400,400i,700,700i|Cinzel+Decorative:700|Ma+Shan+Zheng:|Liu+Jian+Mao+Cao:&display=swap&subset=chinese-simplified"
+	lineHeight = 2
+    fontSize = 16
+    enableJustify = false
+    enableSmallCap = true
+    enableEmphasisPoint = false
+    enableChinesePunctuationGlyphCorrection = false
+	mainSections = ["posts"]
+	enableFooter = true
 	
+	# 品牌栏
+    fontFamilySiteBrand = "'Liu Jian Mao Cao', cursive"
+	# 页脚
+    fontFamilyFooter = "'Ma Shan Zheng', cursive"
+
+    homeLayout = "poetry"
+
+    ## 「诗意人生」
+    # 诗句，支持 Markdown
+    #homePoetry = ["*To see a world in a grain of sand*","*And a heaven in a wild flower*","*Hold infinity in the palm of your hand*","*And eternity in an hour*"]
+    homePoetry = ["醉里挑灯看剑","梦回吹角连营","八百里分麾下炙","五十弦翻塞外声","沙场秋点兵","马作的卢飞快","弓如霹雳弦惊","了却君王天下事","赢得生前身后名","可怜白发生","*宋·[辛弃疾]*"]
+    
+	# 底部链接的内间距，单位：em
+    homeLinksPadding = 1
+    
+   
